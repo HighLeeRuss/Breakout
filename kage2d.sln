@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{927AE6D6-7E73-0529-A7A5-EAAD93FDE434}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kage2d", "kage2d", "{6F3DC397-DB74-0B2F-E47E-6F5250353228}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{B63FEAB7-A20D-DEBD-8BA1-4EE4770EBA22}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kage", "dev\components\kage\kage.vcxproj", "{B19D6BF2-9D55-AD3F-065D-869BF2334830}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Example", "projects\Example\Example.vcxproj", "{A29299A4-9684-4EF1-B114-3B1F724F55C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B19D6BF2-9D55-AD3F-065D-869BF2334830}.Debug|x64.ActiveCfg = Debug|x64
+		{B19D6BF2-9D55-AD3F-065D-869BF2334830}.Debug|x64.Build.0 = Debug|x64
+		{B19D6BF2-9D55-AD3F-065D-869BF2334830}.Release|x64.ActiveCfg = Release|x64
+		{B19D6BF2-9D55-AD3F-065D-869BF2334830}.Release|x64.Build.0 = Release|x64
+		{A29299A4-9684-4EF1-B114-3B1F724F55C8}.Debug|x64.ActiveCfg = Debug|x64
+		{A29299A4-9684-4EF1-B114-3B1F724F55C8}.Debug|x64.Build.0 = Debug|x64
+		{A29299A4-9684-4EF1-B114-3B1F724F55C8}.Release|x64.ActiveCfg = Release|x64
+		{A29299A4-9684-4EF1-B114-3B1F724F55C8}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6F3DC397-DB74-0B2F-E47E-6F5250353228} = {927AE6D6-7E73-0529-A7A5-EAAD93FDE434}
+		{B19D6BF2-9D55-AD3F-065D-869BF2334830} = {6F3DC397-DB74-0B2F-E47E-6F5250353228}
+		{A29299A4-9684-4EF1-B114-3B1F724F55C8} = {B63FEAB7-A20D-DEBD-8BA1-4EE4770EBA22}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDACB044-0AC8-416B-9008-E6BAD7776A1F}
+	EndGlobalSection
+EndGlobal

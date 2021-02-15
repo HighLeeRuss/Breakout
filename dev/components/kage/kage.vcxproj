@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B19D6BF2-9D55-AD3F-065D-869BF2334830}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>kage</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)dev\sdk\lib\</OutDir>
+    <IntDir>$(SolutionDir)temp\x64\Release\kage\</IntDir>
+    <TargetName>kage</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)dev\sdk\lib\</OutDir>
+    <IntDir>$(SolutionDir)temp\x64\Debug\kage\</IntDir>
+    <TargetName>kage_d</TargetName>
+    <TargetExt>.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)dev\sdk\include;$(SolutionDir)dev\sdk\include\kage;$(SolutionDir)dev\sdk\include\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>box2d.lib;glew32.lib;glfw3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)dev\sdk\lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)dev\sdk\include;$(SolutionDir)dev\sdk\include\kage;$(SolutionDir)dev\sdk\include\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>false</MinimalRebuild>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>box2d_d.lib;glew32.lib;glfw3.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)dev\sdk\lib</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_api.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_block_allocator.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_body.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_broad_phase.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_chain_shape.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_circle_shape.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_collision.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_common.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_contact.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_contact_manager.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_distance.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_distance_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_draw.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_dynamic_tree.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_edge_shape.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_fixture.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_friction_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_gear_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_growable_stack.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_math.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_motor_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_mouse_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_polygon_shape.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_prismatic_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_pulley_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_revolute_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_rope.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_settings.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_shape.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_stack_allocator.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_timer.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_time_of_impact.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_time_step.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_types.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_weld_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_wheel_joint.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_world.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\b2_world_callbacks.h" />
+    <ClInclude Include="..\..\sdk\include\box2d\box2d.h" />
+    <ClInclude Include="..\..\sdk\include\kage\anim.h" />
+    <ClInclude Include="..\..\sdk\include\kage\atlas.h" />
+    <ClInclude Include="..\..\sdk\include\kage\gameobject.h" />
+    <ClInclude Include="..\..\sdk\include\kage\imconfig-SFML.h" />
+    <ClInclude Include="..\..\sdk\include\kage\imconfig.h" />
+    <ClInclude Include="..\..\sdk\include\kage\imgui-SFML.h" />
+    <ClInclude Include="..\..\sdk\include\kage\imgui.h" />
+    <ClInclude Include="..\..\sdk\include\kage\imgui_internal.h" />
+    <ClInclude Include="..\..\sdk\include\kage\imstb_rectpack.h" />
+    <ClInclude Include="..\..\sdk\include\kage\imstb_textedit.h" />
+    <ClInclude Include="..\..\sdk\include\kage\imstb_truetype.h" />
+    <ClInclude Include="..\..\sdk\include\kage\input.h" />
+    <ClInclude Include="..\..\sdk\include\kage\kage.h" />
+    <ClInclude Include="..\..\sdk\include\kage\nanovg.h" />
+    <ClInclude Include="..\..\sdk\include\kage\nanovg_gl.h" />
+    <ClInclude Include="..\..\sdk\include\kage\nanovg_gl_utils.h" />
+    <ClInclude Include="..\..\sdk\include\kage\nanovg_util.h" />
+    <ClInclude Include="..\..\sdk\include\kage\particles.h" />
+    <ClInclude Include="..\..\sdk\include\kage\physics.h" />
+    <ClInclude Include="..\..\sdk\include\kage\sfml_util.h" />
+    <ClInclude Include="..\..\sdk\include\kage\shader_manager.h" />
+    <ClInclude Include="..\..\sdk\include\kage\sound_manager.h" />
+    <ClInclude Include="..\..\sdk\include\kage\stb_image.h" />
+    <ClInclude Include="..\..\sdk\include\kage\stb_image_write.h" />
+    <ClInclude Include="..\..\sdk\include\kage\system.h" />
+    <ClInclude Include="..\..\sdk\include\kage\texture_manager.h" />
+    <ClInclude Include="..\..\sdk\include\kage\world.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_algorithms.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_bounds.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_constraints.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_curves.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_euler.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_fixed.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_log.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_math.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_matrix.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_memBlock.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_memFile.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_position.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_quaternion.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_random.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_sdf.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_sse.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_streams.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_string.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_tags.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_time.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_types.h" />
+    <ClInclude Include="..\..\sdk\include\kf\kf_vector.h" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\alresource.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\export.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\inputsoundfile.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\listener.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\music.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\outputsoundfile.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\sound.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundbuffer.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundbufferrecorder.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundfilefactory.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundfilereader.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundfilewriter.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundrecorder.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundsource.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundstream.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\config.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\gpupreference.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\blendmode.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\circleshape.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\color.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\convexshape.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\drawable.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\export.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\font.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\glsl.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\glyph.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\image.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\primitivetype.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\rect.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\rectangleshape.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\renderstates.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\rendertarget.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\rendertexture.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\renderwindow.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\shader.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\shape.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\sprite.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\text.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\texture.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\transform.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\transformable.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\vertex.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\vertexarray.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\vertexbuffer.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\view.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\main.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\export.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\ftp.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\http.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\ipaddress.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\packet.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\socket.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\sockethandle.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\socketselector.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\tcplistener.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\tcpsocket.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\network\udpsocket.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\opengl.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\clock.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\err.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\export.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\fileinputstream.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\inputstream.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\lock.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\memoryinputstream.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\mutex.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\nativeactivity.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\noncopyable.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\sleep.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\string.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\thread.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\threadlocal.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\threadlocalptr.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\time.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\utf.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\vector2.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\system\vector3.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\clipboard.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\context.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\contextsettings.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\cursor.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\event.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\export.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\glresource.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\joystick.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\keyboard.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\mouse.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\sensor.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\touch.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\videomode.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\vulkan.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\window.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\windowbase.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\windowhandle.hpp" />
+    <ClInclude Include="..\..\sdk\include\sfml\window\windowstyle.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="anim.cpp" />
+    <ClCompile Include="atlas.cpp" />
+    <ClCompile Include="gameobject.cpp" />
+    <ClCompile Include="imgui-SFML.cpp" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="imgui_stdlib.cpp" />
+    <ClCompile Include="imgui_tables.cpp" />
+    <ClCompile Include="imgui_widgets.cpp" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="kage.cpp" />
+    <ClCompile Include="nanovg.c" />
+    <ClCompile Include="nanovg_util.cpp" />
+    <ClCompile Include="particles.cpp" />
+    <ClCompile Include="physics.cpp" />
+    <ClCompile Include="sfml_util.cpp" />
+    <ClCompile Include="shader_manager.cpp" />
+    <ClCompile Include="sound_manager.cpp" />
+    <ClCompile Include="system.cpp" />
+    <ClCompile Include="texture_manager.cpp" />
+    <ClCompile Include="world.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\sdk\include\sfml\audio\soundfilefactory.inl" />
+    <None Include="..\..\sdk\include\sfml\graphics\glsl.inl" />
+    <None Include="..\..\sdk\include\sfml\graphics\rect.inl" />
+    <None Include="..\..\sdk\include\sfml\system\string.inl" />
+    <None Include="..\..\sdk\include\sfml\system\thread.inl" />
+    <None Include="..\..\sdk\include\sfml\system\threadlocalptr.inl" />
+    <None Include="..\..\sdk\include\sfml\system\utf.inl" />
+    <None Include="..\..\sdk\include\sfml\system\vector2.inl" />
+    <None Include="..\..\sdk\include\sfml\system\vector3.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

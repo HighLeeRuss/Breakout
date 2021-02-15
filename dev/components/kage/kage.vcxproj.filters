@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{dd7b492a-c100-4e0e-adff-92a8b6d57166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{89335ec0-230d-492e-b92f-1c2b17c4c1cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\KF">
+      <UniqueIdentifier>{60a76179-4f10-4029-a7ef-414885db13a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Box2D">
+      <UniqueIdentifier>{14238acf-92cc-4ae1-b24b-fd25a446fe63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SFML">
+      <UniqueIdentifier>{c1e26d83-fb0c-44ad-8b0c-a97aa977eeba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SFML\Graphics">
+      <UniqueIdentifier>{9b9e7494-e6f8-4264-8c57-b97b2559980b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SFML\Network">
+      <UniqueIdentifier>{cc266674-aedd-43cc-9473-35e437224a85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SFML\Window">
+      <UniqueIdentifier>{4f3c405d-43b4-4c4c-8d15-b27f88c24917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SFML\System">
+      <UniqueIdentifier>{127ae34a-3adf-482f-a228-80ad5608ac60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SFML\Audio">
+      <UniqueIdentifier>{0ffc1771-790d-482e-aab1-dc728aee9c08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ImGui">
+      <UniqueIdentifier>{dec0243d-c814-4832-a073-d3078cbefa63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ImGui">
+      <UniqueIdentifier>{b9d1fee2-f826-4ca8-a1a8-b78af9234e49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\NanoVG">
+      <UniqueIdentifier>{82b529b7-5b60-4fd1-91d9-a8284a327456}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\NanoVG">
+      <UniqueIdentifier>{ff69f97a-fffd-4991-9f59-ffd46ac858f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\sdk\include\kage\anim.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\atlas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\gameobject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\kage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\particles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\sfml_util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\shader_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\sound_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\stb_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\stb_image_write.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\texture_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\world.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_algorithms.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_bounds.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_constraints.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_curves.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_euler.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_fixed.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_log.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_math.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_matrix.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_memBlock.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_memFile.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_position.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_quaternion.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_random.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_sdf.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_sse.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_streams.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_string.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_tags.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_time.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_types.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kf\kf_vector.h">
+      <Filter>Header Files\KF</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_api.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_block_allocator.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_body.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_broad_phase.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_chain_shape.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_circle_shape.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_collision.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_common.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_contact.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_contact_manager.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_distance.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_distance_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_draw.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_dynamic_tree.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_edge_shape.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_fixture.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_friction_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_gear_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_growable_stack.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_math.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_motor_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_mouse_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_polygon_shape.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_prismatic_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_pulley_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_revolute_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_rope.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_settings.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_shape.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_stack_allocator.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_time_of_impact.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_time_step.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_timer.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_types.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_weld_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_wheel_joint.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_world.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\b2_world_callbacks.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\box2d\box2d.h">
+      <Filter>Header Files\Box2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\config.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\gpupreference.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\main.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\opengl.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window.hpp">
+      <Filter>Header Files\SFML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\primitivetype.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\rect.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\rectangleshape.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\renderstates.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\rendertarget.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\rendertexture.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\renderwindow.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\shader.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\shape.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\sprite.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\text.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\texture.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\transform.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\transformable.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\vertex.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\vertexarray.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\vertexbuffer.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\view.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\blendmode.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\circleshape.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\color.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\convexshape.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\drawable.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\export.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\font.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\glsl.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\glyph.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\graphics\image.hpp">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundbuffer.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundbufferrecorder.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundfilefactory.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundfilereader.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundfilewriter.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundrecorder.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundsource.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\soundstream.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\alresource.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\export.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\inputsoundfile.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\listener.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\music.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\outputsoundfile.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\audio\sound.hpp">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\packet.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\socket.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\sockethandle.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\socketselector.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\tcplistener.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\tcpsocket.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\udpsocket.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\export.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\ftp.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\http.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\network\ipaddress.hpp">
+      <Filter>Header Files\SFML\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\joystick.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\keyboard.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\mouse.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\sensor.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\touch.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\videomode.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\vulkan.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\window.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\windowbase.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\windowhandle.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\windowstyle.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\clipboard.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\context.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\contextsettings.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\cursor.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\event.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\export.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\window\glresource.hpp">
+      <Filter>Header Files\SFML\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\noncopyable.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\sleep.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\string.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\thread.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\threadlocal.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\threadlocalptr.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\time.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\utf.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\vector2.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\vector3.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\clock.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\err.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\export.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\fileinputstream.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\inputstream.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\lock.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\memoryinputstream.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\mutex.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\sfml\system\nativeactivity.hpp">
+      <Filter>Header Files\SFML\System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\imconfig.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\imconfig-SFML.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\imgui.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\imgui_internal.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\imgui-SFML.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\imstb_rectpack.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\imstb_textedit.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\imstb_truetype.h">
+      <Filter>Header Files\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\nanovg.h">
+      <Filter>Header Files\NanoVG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\nanovg_gl.h">
+      <Filter>Header Files\NanoVG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\nanovg_gl_utils.h">
+      <Filter>Header Files\NanoVG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\sdk\include\kage\nanovg_util.h">
+      <Filter>Header Files\NanoVG</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="anim.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="atlas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gameobject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="input.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="particles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="physics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sfml_util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shader_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sound_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="system.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="texture_manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="world.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_demo.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_draw.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_stdlib.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_tables.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_widgets.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui-SFML.cpp">
+      <Filter>Source Files\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="nanovg.c">
+      <Filter>Source Files\NanoVG</Filter>
+    </ClCompile>
+    <ClCompile Include="nanovg_util.cpp">
+      <Filter>Source Files\NanoVG</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\sdk\include\sfml\graphics\rect.inl">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </None>
+    <None Include="..\..\sdk\include\sfml\graphics\glsl.inl">
+      <Filter>Header Files\SFML\Graphics</Filter>
+    </None>
+    <None Include="..\..\sdk\include\sfml\audio\soundfilefactory.inl">
+      <Filter>Header Files\SFML\Audio</Filter>
+    </None>
+    <None Include="..\..\sdk\include\sfml\system\string.inl">
+      <Filter>Header Files\SFML\System</Filter>
+    </None>
+    <None Include="..\..\sdk\include\sfml\system\thread.inl">
+      <Filter>Header Files\SFML\System</Filter>
+    </None>
+    <None Include="..\..\sdk\include\sfml\system\threadlocalptr.inl">
+      <Filter>Header Files\SFML\System</Filter>
+    </None>
+    <None Include="..\..\sdk\include\sfml\system\utf.inl">
+      <Filter>Header Files\SFML\System</Filter>
+    </None>
+    <None Include="..\..\sdk\include\sfml\system\vector2.inl">
+      <Filter>Header Files\SFML\System</Filter>
+    </None>
+    <None Include="..\..\sdk\include\sfml\system\vector3.inl">
+      <Filter>Header Files\SFML\System</Filter>
+    </None>
+  </ItemGroup>
+</Project>
