@@ -1,0 +1,25 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Kage2D Application</Name>
+    <Description>Base project for Kage2D.</Description>
+    <ProjectType>VC</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>base</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$projectname$.vcxproj" File="kage_app.vcxproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$.vcxproj.filters">kage_app.vcxproj.filters</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="app.cpp">app.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="app_main.cpp">app_main.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="dependencies.cpp">dependencies.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="app.h">app.h</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>
