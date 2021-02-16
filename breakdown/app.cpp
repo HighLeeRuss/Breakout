@@ -50,5 +50,7 @@ namespace App
 	void cleanup()
 	{
 		// Perform any clean up your project needs
+		// This is just a test
+
 	}
 }
