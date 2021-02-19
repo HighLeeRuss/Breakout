@@ -102,19 +102,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="app.h" />
-    <ClInclude Include="myGameObject.h">
-      <SubType>
-      </SubType>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="app.cpp" />
     <ClCompile Include="app_main.cpp" />
     <ClCompile Include="dependencies.cpp" />
-    <ClCompile Include="myGameObject.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
