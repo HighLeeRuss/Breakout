@@ -102,6 +102,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="app.h" />
+    <ClInclude Include="Ball.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="Brick.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Paddle.h">
       <SubType>
       </SubType>
@@ -110,6 +118,14 @@
   <ItemGroup>
     <ClCompile Include="app.cpp" />
     <ClCompile Include="app_main.cpp" />
+    <ClCompile Include="Ball.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="Brick.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
     <ClCompile Include="dependencies.cpp" />
     <ClCompile Include="Paddle.cpp">
       <SubType>

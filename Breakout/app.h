@@ -26,6 +26,8 @@
 // GameObjects
 // #include "Rabbit.h"
 #include "Paddle.h"
+#include "Ball.h"
+#include "Brick.h"
 
 #pragma warning(disable: 4100)
 
@@ -60,4 +62,6 @@ namespace App
 	// Any file that includes app.h can access this variable using App::exampleValue.
 	// Consider making get/set functions instead, they are safer.
 	extern int exampleValue;
+	extern int score;
+	extern int lives;
 };
