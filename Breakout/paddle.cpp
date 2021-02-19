@@ -6,13 +6,14 @@ paddle::paddle()
 	m_sprite = kage::TextureManager::getSprite("data/zazaka.png");
 	kage::centreOrigin(m_sprite);
 	m_tags.add("paddle");
+	m_tags.add("Player");
 
 	// Make a Box2D body
 	m_body = kage::Physics::BodyBuilder()
 				.pos(0, 0)
 				.userData(this)	// This lets the body know which GameObject owns it
 				.build();
-
+	
 	// Make a fixture (collision shape) for the body
 	kage::Physics::CircleBuilder()
 		.radius(0.4f)
