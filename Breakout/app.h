@@ -25,6 +25,7 @@
 
 // GameObjects
 // #include "Rabbit.h"
+#include "Paddle.h"
 
 #pragma warning(disable: 4100)
 

@@ -24,7 +24,7 @@
     <ClCompile Include="app_main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="paddle.cpp">
+    <ClCompile Include="Paddle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClInclude Include="app.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="paddle.h">
+    <ClInclude Include="Paddle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

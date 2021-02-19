@@ -19,13 +19,16 @@ namespace App
 	{
 		// Add some physics colliders to the screen edges
 		// Bottom
-		kage::Physics::EdgeBuilder().start(0, 16.875).end(30, 16.875).friction(1).build(kage::Physics::getDefaultStatic());
+		kage::Physics::EdgeBuilder().start(0, 15).end(30, 15).friction(1).build(kage::Physics::getDefaultStatic());
 		// Top
 		kage::Physics::EdgeBuilder().start(0, 0).end(30, 0).friction(1).build(kage::Physics::getDefaultStatic());
 		// Left
-		kage::Physics::EdgeBuilder().start(0, 0).end(0, 16.875).friction(1).build(kage::Physics::getDefaultStatic());
+		kage::Physics::EdgeBuilder().start(0, 0).end(0, 15).friction(1).build(kage::Physics::getDefaultStatic());
 		// Right
-		kage::Physics::EdgeBuilder().start(30, 0).end(30, 16.875).friction(1).build(kage::Physics::getDefaultStatic());
+		kage::Physics::EdgeBuilder().start(30, 0).end(30, 15).friction(1).build(kage::Physics::getDefaultStatic());
+
+		auto paddle = kage::World::build<Paddle>();
+		paddle->position(15, 14);
 
 		return true;
 	}

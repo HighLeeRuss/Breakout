@@ -1,11 +1,11 @@
 #pragma once
 #include "kage/gameobject.h"
 
-class paddle : public kage::GameObject
+class Paddle : public kage::GameObject
 {
 public:
-	paddle();
-	~paddle();
+	Paddle();
+	~Paddle();
 
 	void update(float deltaT);
 	void onCollision(GameObject *obj);

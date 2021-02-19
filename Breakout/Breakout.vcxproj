@@ -102,7 +102,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="app.h" />
-    <ClInclude Include="paddle.h">
+    <ClInclude Include="Paddle.h">
       <SubType>
       </SubType>
     </ClInclude>
@@ -111,7 +111,7 @@
     <ClCompile Include="app.cpp" />
     <ClCompile Include="app_main.cpp" />
     <ClCompile Include="dependencies.cpp" />
-    <ClCompile Include="paddle.cpp">
+    <ClCompile Include="Paddle.cpp">
       <SubType>
       </SubType>
     </ClCompile>

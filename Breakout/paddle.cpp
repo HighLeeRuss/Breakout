@@ -1,37 +1,59 @@
-#include "paddle.h"
+#include "Paddle.h"
 #include "app.h"
 
-paddle::paddle()
+Paddle::Paddle()
 {
-	m_sprite = kage::TextureManager::getSprite("data/zazaka.png");
+	m_sprite = kage::TextureManager::getSprite("data/paddle.png");
 	kage::centreOrigin(m_sprite);
-	m_tags.add("paddle");
-	m_tags.add("Player");
+	m_tags.add("Paddle");
 
 	// Make a Box2D body
 	m_body = kage::Physics::BodyBuilder()
 				.pos(0, 0)
+				.type(b2BodyType::b2_kinematicBody)
 				.userData(this)	// This lets the body know which GameObject owns it
 				.build();
-	
+
 	// Make a fixture (collision shape) for the body
-	kage::Physics::CircleBuilder()
-		.radius(0.4f)
+	kage::Physics::BoxBuilder()
+		.size(4, 0.5)
 		.mass(1)
 		.build(m_body); // We need to tell the builder which body to attach to
 }
 
-paddle::~paddle()
+Paddle::~Paddle()
 {
 
 }
 
-void paddle::update(float deltaT)
+void Paddle::update(float deltaT)
 {
 	// Do logic here
+	velocity(0, 0);
+	if (kage::Input::isKeyDown(sf::Keyboard::Left))
+	{
+		velocity(-8, 0);
+	}
+	if (kage::Input::isKeyDown(sf::Keyboard::Right))
+	{
+		velocity(8, 0);
+	}
+
+	auto pos = position();
+	if (pos.x < 2)
+	{
+		pos.x = 2;
+	}
+	if (pos.x > 28)
+	{
+		pos.x = 28;
+	}
+
+	position(pos);
+
 }
 
-void paddle::onCollision(GameObject *obj)
+void Paddle::onCollision(GameObject *obj)
 {
 	//if (obj->m_tags.has("enemy"))
 	//{
@@ -40,7 +62,7 @@ void paddle::onCollision(GameObject *obj)
 	//}
 }
 
-void paddle::onCollision(b2Fixture *fix)
+void Paddle::onCollision(b2Fixture *fix)
 {
 	//if ((int)(fix->GetUserData()) == 1234) // Fake ID value 1234
 	//{
@@ -48,15 +70,15 @@ void paddle::onCollision(b2Fixture *fix)
 }
 
 #pragma region Optional
-//void paddle::onCollisionStop(GameObject* obj)
+//void Paddle::onCollisionStop(GameObject* obj)
 //{
 //}
 
-//void paddle::onCollisionStop(b2Fixture* fix)
+//void Paddle::onCollisionStop(b2Fixture* fix)
 //{
 //}
 
-//void paddle::render(sf::RenderTarget& rt)
+//void Paddle::render(sf::RenderTarget& rt)
 //{
 //	// Do custom rendering here. Not normally needed.
 //}
