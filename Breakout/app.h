@@ -28,6 +28,7 @@
 #include "Paddle.h"
 #include "Ball.h"
 #include "Brick.h"
+#include "Heart.h"
 
 #pragma warning(disable: 4100)
 

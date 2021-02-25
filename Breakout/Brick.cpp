@@ -18,6 +18,8 @@ Brick::Brick()
 	kage::Physics::BoxBuilder()
 		.size(2, 1)
 		.mass(1)
+		.category(4)
+		.mask(65527)
 		.build(m_body); // We need to tell the builder which body to attach to
 }
 

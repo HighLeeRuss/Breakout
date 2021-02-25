@@ -18,6 +18,8 @@ Paddle::Paddle()
 	kage::Physics::BoxBuilder()
 		.size(4, 0.5)
 		.mass(1)
+		.category(1)
+		.mask(65535)
 		.build(m_body); // We need to tell the builder which body to attach to
 }
 
@@ -40,6 +42,9 @@ void Paddle::update(float deltaT)
 	}
 
 	auto pos = position();
+
+	pos.x = kage::Input::getMousePosition(App::getWindow()).x;
+
 	if (pos.x < 2)
 	{
 		pos.x = 2;
@@ -55,11 +60,13 @@ void Paddle::update(float deltaT)
 
 void Paddle::onCollision(GameObject *obj)
 {
-	//if (obj->m_tags.has("enemy"))
-	//{
-		//m_dead = true;		// kills itself
-		//obj->m_dead = true;	// kills the other object
-	//}
+	if (obj->m_tags.has("Ball"))
+	{
+		auto vel = obj -> velocity();
+		float difference = obj->position().x - position().x;
+		vel.x += difference * 2;
+		obj -> velocity(vel);
+	}
 }
 
 void Paddle::onCollision(b2Fixture *fix)
