@@ -56,7 +56,7 @@ void Ball::update(float deltaT)
 
 void Ball::onCollision(GameObject *obj)
 {
-	int healthSpawn = 80;
+	int healthSpawn = 90;
 	int ballSpawn = 70;
 	int chance = rand() % 100 + 1;
 	

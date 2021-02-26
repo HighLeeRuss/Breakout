@@ -68,7 +68,7 @@ namespace App
 	void update(float deltaT)
 	{
 		// Your main game logic goes here
-		if (kage::Input::isKeyPressed(sf::Keyboard::S) && !running) //if player presses S calls the started bool
+		if (kage::Input::isKeyPressed(sf::Keyboard::S)) //if player presses S calls the started bool
 		{
 			//kage::World::clear();
 			started = true;
@@ -100,7 +100,7 @@ namespace App
 		
 		if (running == true)
 		{
-			//ShowCursor(false);
+			ShowCursor(false);
 			kage::SoundManager::preload("data/NFF-soft-confirm.wav");
 
 			scoreText.setFont(g_font);
@@ -129,35 +129,37 @@ namespace App
 
 			gameWonText.setFont(g_font);
 			gameWonText.setCharacterSize(240);
-			gameWonText.setPosition(450, 400);
-			gameWonText.setString("You Won\nPress Space to play again");
+			gameWonText.setPosition(450, 200);
+			gameWonText.setString("You Won\nPress Space to\n play again");
 			gameWonText.setFillColor(sf::Color::Black);
-
-			auto ball = kage::World::findByTag("Ball");
-			if (ball == 0 && !gameOver)
-			{
-				if (!gameWon)
-				{
-				lives = lives - 1;
-				}
-				else if (lives == 0 && !gameWon)
-				{
-				gameOver = true;
-				}
-				else if (ball == 0 && !gameWon)
-				{
-					auto ball = kage::World::build<Ball>();
-					ball->position(15, 8);
-					ball->velocity(5, 6);
-				}
-			}
-			
 
 			auto bricks = kage::World::findAllByTag("Brick");
 			if (bricks.size() == 0)
 			{
 				gameWon = true;
 			}
+
+			auto ball = kage::World::findByTag("Ball");
+			if (ball == 0 && (!gameWon && !gameOver))
+			{
+				lives = lives - 1;
+				if (lives == 0)
+				{
+					gameOver = true;
+				}
+				else
+				{
+					auto ball = kage::World::build<Ball>();
+					ball->position(15, 8);
+					ball->velocity(5, 6);
+				}
+			
+			}
+
+			
+			
+
+			
 
 
 			//ImGui::Begin("Game Stats");
@@ -256,7 +258,7 @@ namespace App
 			g_window.draw(gameOverText);
 		}
 
-		if (gameWon && !gameOver)
+		if (gameWon)
 		{
 			g_window.draw(gameWonText);
 		}

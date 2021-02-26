@@ -30,6 +30,10 @@ Heart::~Heart()
 void Heart::update(float deltaT)
 {
 	// Do logic here
+	if (position().y > 16.875)
+	{
+		m_dead = true;
+	}
 }
 
 void Heart::onCollision(GameObject *obj)

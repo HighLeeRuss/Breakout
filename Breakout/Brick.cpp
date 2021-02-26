@@ -13,6 +13,7 @@ Brick::Brick()
 				.type(b2BodyType::b2_staticBody)
 				.userData(this)	// This lets the body know which GameObject owns it
 				.build();
+	m_life = 1;
 
 	// Make a fixture (collision shape) for the body
 	kage::Physics::BoxBuilder()
@@ -31,6 +32,7 @@ Brick::~Brick()
 void Brick::update(float deltaT)
 {
 	// Do logic here
+
 }
 
 void Brick::onCollision(GameObject *obj)
